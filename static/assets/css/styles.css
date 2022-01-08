@@ -1,0 +1,169 @@
+:root {
+    --white: #FFF;
+    --primary: #5358B6;
+    --primary-darker-10: #404496;
+    --primary-opacity-50: #5358B680;
+    --primary-opacity-30: #5358B64D;
+    --primary-light: #EDEEFB;
+    --secondary: #454c54;
+    --secondary-light: #5a6972;
+
+
+    /* Params */
+    --radius-default: 8px;
+    --gap-default: 1rem;
+    --transition-default: ease-in-out .2s;
+}
+
+body {
+    background-color:  var(--primary-light);
+    font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+}
+
+/*--------------------*/
+/*   Text utilities   */
+/*--------------------*/
+.login-container {
+    margin: 5rem auto;
+    background-color: var(--white);
+    width: max-content;
+    padding: 3rem;
+    border-radius: var(--radius-default);
+    box-shadow: 0px 3px 10px var(--primary-opacity-30);
+}
+
+.login-container .header {
+    padding: 2rem 1rem;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.login-container .header img {
+    max-width: 100%;
+}
+
+.login-container .login-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.login-container .login-data .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .login-data .input-group label {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: .3rem
+}
+
+.login-container .login-data .input-group input {
+    font-size: 1.6rem;
+    border-radius: var(--radius-default);
+    border-style: solid;
+    border-color: var(--primary-light);
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+.login-container .login-data .input-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    transition: var(--transition-default);
+}
+
+.login-container .login-data .input-group input::before {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: var(--primary);
+}
+
+
+/*--------------------*/
+/*   Text utilities   */
+/*--------------------*/
+.text {
+    font-size: .9rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-link {
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-link:hover {
+    font-weight: 600;
+}
+
+
+/*----------------------*/
+/*   Button utilities   */
+/*----------------------*/
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-default);
+}
+
+.btn {
+    color: var(--white);
+    font-size: 1rem;
+    height: 2.6rem;
+    font-weight: 600;
+    border-radius: var(--radius-default);
+    border: solid var(--primary) 0px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.btn:hover {
+    background-color: var(--primary-darker-10);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    border-width: 2px;
+    color: var(--primary);
+}
+
+
+.btn-outline:hover {
+    color: var(--white);
+    border-color: var(--primary-darker-10);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: var(--white);
+    }
+
+    .login-container {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login-container {
+        max-width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
